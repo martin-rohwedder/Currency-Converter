@@ -6,6 +6,5 @@ namespace CurrencyConverter.ViewModels
 {
     public class ConverterViewModel : BaseViewModel
     {
-        public string PageName { get; set; } = "My New App";
     }
 }

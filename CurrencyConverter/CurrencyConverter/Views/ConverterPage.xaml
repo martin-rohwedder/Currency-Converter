@@ -6,11 +6,10 @@
     <ContentPage.BindingContext>
         <vm:ConverterViewModel />
     </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding PageName}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Convert Currency" Style="{StaticResource HeadlineLabel}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

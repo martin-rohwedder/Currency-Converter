@@ -3,8 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CurrencyConverter.App">
     <Application.Resources>
+        <!-- Font Awesome Icon Unicodes -->
         <x:String x:Key="IconCalculator">&#xf1ec;</x:String>
         <x:String x:Key="IconCog">&#xf013;</x:String>
         <x:String x:Key="IconChartLine">&#xf201;</x:String>
+
+        <ResourceDictionary>
+            <!-- Colors -->
+            <Color x:Key="MyColor">#333333</Color>
+            
+            <!-- Label Styles -->
+            <Style x:Key="HeadlineLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="TextColor" Value="{DynamicResource MyColor}" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

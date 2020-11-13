@@ -9,9 +9,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Currency History"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Currency History" Style="{StaticResource HeadlineLabel}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
