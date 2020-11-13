@@ -8,8 +8,71 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Convert Currency" Style="{StaticResource HeadlineLabel}" />
+        <StackLayout Padding="10">
+            <Label Text="Convert Currency" 
+                   Style="{StaticResource HeadlineLabel}" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"
+                       Text="100.00"
+                       Keyboard="Numeric" />
+
+                <Picker Grid.Row="1"
+                        Grid.Column="0"
+                        Title="Base"
+                        SelectedIndex="0"
+                        Style="{StaticResource CurrencyPicker}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>DKK</x:String>
+                            <x:String>Euro</x:String>
+                            <x:String>USD</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button Grid.Row="1"
+                        Grid.Column="1"
+                        Style="{StaticResource CircularButton}"
+                        FontFamily="FontAwesomeSolid"
+                        Text="{StaticResource IconArrowsHorizontal}"
+                        Margin="10, 0, 10, 0"/>
+
+                <Picker Grid.Row="1"
+                        Grid.Column="2"
+                        Title="Base"
+                        SelectedIndex="0"
+                        Style="{StaticResource CurrencyPicker}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>DKK</x:String>
+                            <x:String>Euro</x:String>
+                            <x:String>USD</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"
+                       Style="{StaticResource ConvertedCurrencyLabel}"
+                       HorizontalTextAlignment="Center"
+                       Text="100.00" />
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

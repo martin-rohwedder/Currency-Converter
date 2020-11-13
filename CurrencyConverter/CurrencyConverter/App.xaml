@@ -7,15 +7,32 @@
         <x:String x:Key="IconCalculator">&#xf1ec;</x:String>
         <x:String x:Key="IconCog">&#xf013;</x:String>
         <x:String x:Key="IconChartLine">&#xf201;</x:String>
+        <x:String x:Key="IconArrowsHorizontal">&#xf337;</x:String>
 
         <ResourceDictionary>
             <!-- Colors -->
-            <Color x:Key="MyColor">#333333</Color>
+            <Color x:Key="BlackColor">#333333</Color>
             
             <!-- Label Styles -->
             <Style x:Key="HeadlineLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="36" />
-                <Setter Property="TextColor" Value="{DynamicResource MyColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+            </Style>
+            <Style x:Key="ConvertedCurrencyLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+            </Style>
+            
+            <!-- Picker Styles -->
+            <Style x:Key="CurrencyPicker" TargetType="Picker">
+                <!--<Setter Property="WidthRequest" Value="140" />-->
+            </Style>
+            
+            <!-- Circular Button Style -->
+            <Style x:Key="CircularButton" TargetType="Button">
+                <Setter Property="CornerRadius" Value="25" />
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="HeightRequest" Value="50" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
