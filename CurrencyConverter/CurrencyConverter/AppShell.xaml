@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyConverter.AppShell"
+             xmlns:views="clr-namespace:CurrencyConverter.Views"
+             Shell.NavBarIsVisible="False">
+    <TabBar>
+        <ShellContent Title="Convert"
+                      ContentTemplate="{DataTemplate views:ConverterPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{StaticResource IconCalculator}"
+                                 Size="12" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Settings"
+                      ContentTemplate="{DataTemplate views:SettingsPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{StaticResource IconCog}"
+                                 Size="12" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </TabBar>
+</Shell>
