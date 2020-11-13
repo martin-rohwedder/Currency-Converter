@@ -5,5 +5,6 @@
     <Application.Resources>
         <x:String x:Key="IconCalculator">&#xf1ec;</x:String>
         <x:String x:Key="IconCog">&#xf013;</x:String>
+        <x:String x:Key="IconChartLine">&#xf201;</x:String>
     </Application.Resources>
 </Application>

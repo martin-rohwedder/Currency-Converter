@@ -13,6 +13,16 @@
                                  Size="12" />
             </ShellContent.Icon>
         </ShellContent>
+
+        <ShellContent Title="History"
+                      ContentTemplate="{DataTemplate views:CurrencyHistoryPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{StaticResource IconChartLine}"
+                                 Size="12" />
+            </ShellContent.Icon>
+        </ShellContent>
+
         <ShellContent Title="Settings"
                       ContentTemplate="{DataTemplate views:SettingsPage}">
             <ShellContent.Icon>
