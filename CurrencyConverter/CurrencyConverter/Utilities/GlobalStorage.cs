@@ -48,7 +48,7 @@ namespace CurrencyConverter.Utilities
         {
             LatestCurrency latestCurrency = null;
 
-            if (DateTime.Compare(DateTime.Now, latestDate) == 0)
+            if (CompareLatestDateWithToday(latestDate))
             {
                 var latestCurrencyJsonString = Application.Current.Properties["LatestCurrencyJsonString"] as string;
                 latestCurrency = JsonConvert.DeserializeObject<LatestCurrency>(latestCurrencyJsonString);
@@ -63,13 +63,24 @@ namespace CurrencyConverter.Utilities
                 else
                 {
                     latestCurrency = await CurrencyRestService.GetLatestCurrencyAsync();
-                    Application.Current.Properties.Add("LatestDate", latestCurrency.Date);
-                    Application.Current.Properties.Add("LatestCurrencyJsonString", JsonConvert.SerializeObject(latestCurrency));
+                    Application.Current.Properties["LatestDate"] = latestCurrency.Date;
+                    Application.Current.Properties["LatestCurrenctJsonString"] = JsonConvert.SerializeObject(latestCurrency);
                     await Application.Current.SavePropertiesAsync();
                 }
             }
 
             return latestCurrency;
+        }
+
+        /// <summary>
+        /// Compare the latest date time date, with today (DateTime.Now).
+        /// This comparison excluded the time.
+        /// </summary>
+        /// <param name="latestDateTime">The latest date time object</param>
+        /// <returns>True, if the latest DateTime objects date is equal to today</returns>
+        private static bool CompareLatestDateWithToday(DateTime latestDateTime)
+        {
+            return (DateTime.Now.Day == latestDateTime.Day && DateTime.Now.Month == latestDateTime.Month && DateTime.Now.Year == latestDateTime.Year);
         }
     }
 }
